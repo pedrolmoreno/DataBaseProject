@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [DEVSQL01\SQL Administrators]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

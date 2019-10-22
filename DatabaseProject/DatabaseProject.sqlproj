@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DatabaseProject</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{2a39c044-1186-4e55-a43c-cab8a0d83652}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DatabaseProject</RootNamespace>
+    <AssemblyName>DatabaseProject</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="SqlSchemaCompare" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\OnlineEligibilityRequest.sql" />
+    <Build Include="dbo\Tables\PortalPage.sql" />
+    <Build Include="dbo\Tables\Procedures.sql" />
+    <Build Include="dbo\Tables\UMCollectionAnswer.sql" />
+    <Build Include="dbo\Tables\UMCriteriaFile.sql" />
+    <Build Include="dbo\Tables\UMCriteriaFiles.sql" />
+    <Build Include="dbo\Tables\UMCriteriaLogs.sql" />
+    <Build Include="dbo\Tables\UMDecisionTree.sql" />
+    <Build Include="dbo\Tables\UMGenericLog.sql" />
+    <Build Include="dbo\Tables\UMProcedures.sql" />
+    <Build Include="dbo\Tables\UMQuestionAnswer.sql" />
+    <Build Include="dbo\Tables\UMQuestionAnswerLog.sql" />
+    <Build Include="dbo\Tables\UMQuestionCollection.sql" />
+    <Build Include="dbo\Tables\UMRequestReviewLevel.sql" />
+    <Build Include="dbo\Tables\UMTimeLine.sql" />
+    <Build Include="dbo\Tables\UMTreeCollection.sql" />
+    <Build Include="dbo\Tables\UserRegistration.sql" />
+    <Build Include="dbo\Tables\VisionType.sql" />
+    <Build Include="dbo\Tables\webHeikenInfo.sql" />
+    <Build Include="dbo\Tables\XmlCatalogFile.sql" />
+    <Build Include="dbo\Tables\XmlCatalogUnit.sql" />
+    <Build Include="dbo\Tables\XmlCatalogUnitAvailability.sql" />
+    <Build Include="dbo\Tables\XmlRPGCatalogProducts.sql" />
+    <Build Include="dbo\Tables\UMDecisionTreeRecommendedStatusCriteria.sql" />
+    <Build Include="dbo\Tables\Levels.sql" />
+    <Build Include="dbo\Tables\Requests.sql" />
+    <Build Include="dbo\Tables\UMCriterias.sql" />
+    <Build Include="dbo\Tables\COARequest.sql" />
+    <Build Include="dbo\Tables\XmlCatalogManufacturer.sql" />
+    <Build Include="dbo\Tables\XmlCatalogProduct.sql" />
+    <Build Include="dbo\Tables\XmlCatalogProductFamily.sql" />
+    <Build Include="dbo\Tables\XmlCatalogSerie.sql" />
+    <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
+    <Build Include="dbo\Tables\__MigrationHistory.sql" />
+    <Build Include="dbo\Tables\Action.sql" />
+    <Build Include="dbo\Tables\ClaimAppealFile.sql" />
+    <Build Include="dbo\Tables\ClaimAppealHistory.sql" />
+    <Build Include="dbo\Tables\ClaimAppealInfoRequest.sql" />
+    <Build Include="dbo\Tables\ClaimAppealLevel.sql" />
+    <Build Include="dbo\Tables\ClaimAppealList.sql" />
+    <Build Include="dbo\Tables\ClaimAppealNotes.sql" />
+    <Build Include="dbo\Tables\ClaimAppealOverride.sql" />
+    <Build Include="dbo\Tables\ClaimAppealRequest.sql" />
+    <Build Include="dbo\Tables\ClaimAppealStatus.sql" />
+    <Build Include="dbo\Tables\ClaimFiles.sql" />
+    <Build Include="dbo\Tables\ClaimProcedureValue.sql" />
+    <Build Include="dbo\Tables\COAAdvisoryMessage.sql" />
+    <Build Include="dbo\Tables\COARequestStatus.sql" />
+    <Build Include="dbo\Tables\CodesCPT.sql" />
+    <Build Include="dbo\Tables\ContactLensPrescription.sql" />
+    <Build Include="dbo\Tables\DiagnosisT.sql" />
+    <Build Include="dbo\Tables\DictionaryData.sql" />
+    <Build Include="dbo\Tables\EligibilityType.sql" />
+    <Build Include="dbo\Tables\Files.sql" />
+    <Build Include="dbo\Tables\LensOrdersProcessed.sql" />
+    <Build Include="dbo\Tables\LensOrderStatus.sql" />
+    <Build Include="dbo\Tables\LobLayout.sql" />
+    <Build Include="dbo\Tables\LobPage.sql" />
+    <Build Include="dbo\Tables\LobPortalCode.sql" />
+    <Build Include="dbo\Tables\MultiProcedures.sql" />
+    <Build Include="dbo\Tables\OERFile.sql" />
+    <Build Include="dbo\Views\XmlCatalogProducts.sql" />
+    <Build Include="dbo\Views\COAMonthToDate.sql" />
+    <Build Include="Security\DEVSQL01_SQL Users.sql" />
+    <Build Include="Security\DEVSQL01_SQL Users_1.sql" />
+    <Build Include="Security\DEVSQL01_SQL Administrators.sql" />
+    <Build Include="Security\DEVSQL01_SQL Administrators_1.sql" />
+    <Build Include="dbo\Stored Procedures\ClaimStatusByClaimId.sql" />
+    <Build Include="dbo\Stored Procedures\ClaimStatusDetail.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\ClaimStatusReport.sql" />
+    <Build Include="dbo\Stored Procedures\ClaimStatusSearch.sql" />
+    <Build Include="dbo\Stored Procedures\ClaimSummaryReportSearch.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteAbbWatcherTables.sql" />
+    <Build Include="dbo\Stored Procedures\FindContactLensProducts.sql" />
+    <Build Include="dbo\Stored Procedures\GetCapFlag.sql" />
+    <Build Include="dbo\Stored Procedures\GetChannelByUserID.sql" />
+    <Build Include="dbo\Stored Procedures\GetEligibilityCare.sql" />
+    <Build Include="dbo\Stored Procedures\GetEligibilityPrimaryCare.sql" />
+    <Build Include="dbo\Stored Procedures\GetExpiredLocationsByLobIdAndVendorId.sql" />
+    <Build Include="dbo\Stored Procedures\GetExpiredVendorByLobId.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobStatus.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\GetJobStatusDetail.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\GetLocationsByLobIdAndVendorId.sql" />
+    <Build Include="dbo\Stored Procedures\GetMemberEligibilityById.sql" />
+    <Build Include="dbo\Stored Procedures\GetOptifactOrdersHistoryById.sql" />
+    <Build Include="dbo\Stored Procedures\GetOptifactOrdersStatus.sql" />
+    <Build Include="dbo\Stored Procedures\GetPaperJobStatus.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\GetPayorsByLOB.sql" />
+    <Build Include="dbo\Stored Procedures\GetProcedureLogic.sql" />
+    <Build Include="dbo\Stored Procedures\GetProviderInformation.sql" />
+    <Build Include="dbo\Stored Procedures\GetRequestIndicator.sql" />
+    <Build Include="dbo\Stored Procedures\GetUMAuthBySubscriberId.sql" />
+    <Build Include="dbo\Stored Procedures\GetUMAuthDetails.sql" />
+    <Build Include="dbo\Stored Procedures\GetUMAuthDiagnosis.sql" />
+    <Build Include="dbo\Stored Procedures\GetUMAuthProcedure.sql" />
+    <Build Include="dbo\Stored Procedures\GetVendorById.sql" />
+    <Build Include="dbo\Stored Procedures\GetVendorByLobId.sql" />
+    <Build Include="dbo\Stored Procedures\prov_get_payors_lob.sql" />
+    <Build Include="dbo\Stored Procedures\RBACK_CPTLOGIC.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\RBACK_NETPRICE.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\RBACK_PROVPAYOR.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\usp_GetAssignLocationsByLOBIDVendorIDANDUserID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetAssignVendorsByLOBIDANDUserID.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetPCPOrOPHProviderInformation.sql" />
+    <Build Include="dbo\Stored Procedures\web_get_whats_new_acrhived.sql" />
+    <Build Include="dbo\Stored Procedures\web_get_whats_new_providerresources.sql" />
+    <Build Include="dbo\Stored Procedures\WP_GETNETPRICE.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SqlSchemaCompare\SqlSchemaCompare2.scmp" />
+  </ItemGroup>
+</Project>
